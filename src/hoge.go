@@ -1,11 +1,9 @@
-package main
+package src
 
-import (
-	"fmt"
-)
+import "fmt"
 
-func main() {
+func Hoge() {
 	fmt.Println("========================")
-	fmt.Println("main")
+	fmt.Println("hoge")
 	fmt.Println("========================")
 }
