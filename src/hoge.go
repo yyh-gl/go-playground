@@ -1,9 +1,9 @@
 package src
 
-import "fmt"
+type foo struct {
+	Val int
+}
 
-func Hoge() {
-	fmt.Println("========================")
-	fmt.Println("hoge")
-	fmt.Println("========================")
+func Hoge() foo {
+	return foo{Val: 100}
 }
