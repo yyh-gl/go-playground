@@ -10,14 +10,15 @@ services:
     volumes:
       - .:/go/src/playground
     command: ['sh', '-c', 'air -d']
-#    depends_on:
-#      - db
-#
-#  db:
-#    image: mysql:latest
-#    ports:
-#      - '13306:3306'
-#    volumes:
-#      - ./docker/mysql:/var/lib/mysql
-#    environment:
-#      MYSQL_ROOT_PASSWORD: mysql
+    depends_on:
+      - db
+
+  db:
+    image: mysql:latest
+    ports:
+      - '13306:3306'
+    volumes:
+      - ./db/migrations:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_DATABASE: playground

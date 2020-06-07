@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/yyh-gl/playground/src"
 )
+
+type Hoge []string
 
 func main() {
 	fmt.Println("========================")
-	fmt.Println("main")
+	fmt.Println("hoge")
 	fmt.Println("========================")
-	src.Hoge()
+
 }

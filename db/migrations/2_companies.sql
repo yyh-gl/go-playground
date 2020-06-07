@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS `playground`.`companies` (
+  `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `playground`.`companies`(`name`)
+  VALUES
+  ('company1'),
+  ('company2');
