@@ -1,4 +1,4 @@
-FROM golang:1.14.3 AS build
+FROM golang:1.15.5 AS build
 WORKDIR /go/src/playground
 
 ENV TZ="Asia/Tokyo"
