@@ -1,12 +1,10 @@
-FROM golang:1.15.5 AS build
-WORKDIR /go/src/playground
+FROM golang:1.16.0
+WORKDIR /go/src/github.com/yyh-gl/go-playground
 
 ENV TZ="Asia/Tokyo"
 ENV GO111MODULE=on
-COPY . .
-RUN go get -u github.com/cosmtrek/air
 
-FROM alpine:latest AS app
-COPY --from=build /go/src/playground/cmd/playground/bin/playground /usr/local/bin/playground
-EXPOSE 8080
-ENTRYPOINT ["playground"]
+COPY . .
+
+RUN go get -u github.com/cosmtrek/air
+RUN go get github.com/tenntenn/goplayground/cmd/gp

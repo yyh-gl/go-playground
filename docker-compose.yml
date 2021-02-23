@@ -4,11 +4,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      target: build
     ports:
       - 8080:8080
     volumes:
-      - .:/go/src/playground
+      - .:/go/src/github.com/yyh-gl/go-playground
     command: ['sh', '-c', 'air -d']
     depends_on:
       - db

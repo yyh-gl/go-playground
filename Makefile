@@ -13,3 +13,7 @@ build: ## ビルド
 .PHONY: bench
 bench: ## ベンチマーク測定
 	docker-compose exec playground go test -bench . -benchmem
+
+.PHONY: login
+login: ## playgroundイメージのbashにアクセス
+	docker run --rm -it --name playground playground /bin/bash
