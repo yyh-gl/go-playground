@@ -16,4 +16,4 @@ bench: ## ベンチマーク測定
 
 .PHONY: login
 login: ## playgroundイメージのbashにアクセス
-	docker run --rm -it --name playground playground /bin/bash
+	docker-compose exec playground /bin/bash

@@ -1,4 +1,4 @@
-FROM golang:1.16.0
+FROM golang:latest
 WORKDIR /go/src/github.com/yyh-gl/go-playground
 
 ENV TZ="Asia/Tokyo"
