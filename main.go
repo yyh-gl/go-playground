@@ -1,9 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"log"
+
+	"github.com/yyh-gl/go-playground/src"
+)
 
 func main() {
-	fmt.Println("========================")
-	fmt.Println("main")
-	fmt.Println("========================")
+	db := newMySQLClient()
+
+	u := src.UserDTO{
+		Name: "hoge",
+		Age:  1,
+	}
+
+	if err := db.Create(&u).Error; err != nil {
+		log.Fatal(err)
+	}
 }

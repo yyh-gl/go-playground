@@ -5,20 +5,28 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 8080:8080
+      - '8080:8080'
     volumes:
       - .:/go/src/github.com/yyh-gl/go-playground
     command: ['sh', '-c', 'air -d']
-    depends_on:
-      - db
 
-  db:
-    # mysql:8.0（M1 Macのためにダイジェストで指定）
-    image: mysql@sha256:03306a1f248727ec979f61424c5fb5150e2c5fd2436f2561c5259b1258d6063c
+  mysql:
+    image: mysql
     ports:
       - '13306:3306'
     volumes:
-      - ./db/migrations:/docker-entrypoint-initdb.d
+      - ./db/migrations/mysql:/docker-entrypoint-initdb.d
     environment:
-      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: playground
+
+  postgresql:
+    image: postgres
+    ports:
+      - '15432:5432'
+    volumes:
+      - ./db/migrations/postgresql:/docker-entrypoint-initdb.d
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: playground

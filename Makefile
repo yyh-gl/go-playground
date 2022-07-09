@@ -8,7 +8,7 @@ help: ## helpを表示
 
 .PHONY: build
 build: ## ビルド
-	GOOS=linux GOARCH=amd64 go build -o ./bin/playground ./main.go
+	GOOS=linux GOARCH=amd64 go build -o ./bin/playground .
 
 .PHONY: bench
 bench: ## ベンチマーク測定

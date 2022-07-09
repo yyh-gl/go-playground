@@ -6,5 +6,5 @@ ENV GO111MODULE=on
 
 COPY . .
 
-RUN go get -u github.com/cosmtrek/air
-RUN go get github.com/tenntenn/goplayground/cmd/gp
+RUN go install github.com/cosmtrek/air@latest
+RUN go install github.com/tenntenn/goplayground/cmd/gp@latest
