@@ -1,4 +1,4 @@
-package main
+package github
 
 import (
 	"encoding/json"
@@ -6,10 +6,6 @@ import (
 	"io"
 	"net/http"
 )
-
-func main() {
-
-}
 
 type GitHubClient struct {
 	*http.Client

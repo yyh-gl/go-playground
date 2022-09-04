@@ -1,0 +1,78 @@
+---
+version: 2
+interactions:
+    - id: 0
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: api.github.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers: {}
+        url: https://api.github.com/users/yyh-gl
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"login":"yyh-gl","id":22971513,"node_id":"MDQ6VXNlcjIyOTcxNTEz","avatar_url":"https://avatars.githubusercontent.com/u/22971513?v=4","gravatar_id":"","url":"https://api.github.com/users/yyh-gl","html_url":"https://github.com/yyh-gl","followers_url":"https://api.github.com/users/yyh-gl/followers","following_url":"https://api.github.com/users/yyh-gl/following{/other_user}","gists_url":"https://api.github.com/users/yyh-gl/gists{/gist_id}","starred_url":"https://api.github.com/users/yyh-gl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/yyh-gl/subscriptions","organizations_url":"https://api.github.com/users/yyh-gl/orgs","repos_url":"https://api.github.com/users/yyh-gl/repos","events_url":"https://api.github.com/users/yyh-gl/events{/privacy}","received_events_url":"https://api.github.com/users/yyh-gl/received_events","type":"User","site_admin":false,"name":"yyh-gl","company":"DMM.com","blog":"https://tech.yyh-gl.dev/","location":"Kanagawa, Japan","email":null,"hireable":null,"bio":"Enjoying engineer in Japan.","twitter_username":"yyh_gl","public_repos":113,"public_gists":0,"followers":12,"following":7,"created_at":"2016-10-21T02:33:19Z","updated_at":"2022-08-21T15:32:52Z"}'
+        headers:
+            Accept-Ranges:
+                - bytes
+            Access-Control-Allow-Origin:
+                - '*'
+            Access-Control-Expose-Headers:
+                - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+            Cache-Control:
+                - public, max-age=60, s-maxage=60
+            Content-Security-Policy:
+                - default-src 'none'
+            Content-Type:
+                - application/json; charset=utf-8
+            Date:
+                - Thu, 01 Sep 2022 15:30:48 GMT
+            Etag:
+                - W/"b73ae4113bfc9a495ef4817728d1d21fcbe5ba546f1708d9ec34d35dc60a1e83"
+            Last-Modified:
+                - Sun, 21 Aug 2022 15:32:52 GMT
+            Referrer-Policy:
+                - origin-when-cross-origin, strict-origin-when-cross-origin
+            Server:
+                - GitHub.com
+            Strict-Transport-Security:
+                - max-age=31536000; includeSubdomains; preload
+            Vary:
+                - Accept, Accept-Encoding, Accept, X-Requested-With
+            X-Content-Type-Options:
+                - nosniff
+            X-Frame-Options:
+                - deny
+            X-Github-Media-Type:
+                - github.v3; format=json
+            X-Github-Request-Id:
+                - D00A:69A4:8A44CE:9725B3:6310D031
+            X-Ratelimit-Limit:
+                - "60"
+            X-Ratelimit-Remaining:
+                - "57"
+            X-Ratelimit-Reset:
+                - "1662049663"
+            X-Ratelimit-Resource:
+                - core
+            X-Ratelimit-Used:
+                - "3"
+            X-Xss-Protection:
+                - "0"
+        status: 200 OK
+        code: 200
+        duration: 157.054583ms
